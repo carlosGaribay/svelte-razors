@@ -1,13 +1,11 @@
 <script>
   export let id;
   export let location;
-  //gloabl store
-
+  import { addToCart } from '../stores/cart';
   import products from '../stores/defaultProducts';
   import Loading from '../components/Loading.svelte';
   import { link } from 'svelte-routing';
   import globalStore from '../stores/globalStore';
-
   $: product = $products.find(item => item.id === parseInt(id));
 </script>
 <svelte:head>
@@ -30,6 +28,7 @@
         <button 
           class="btn btn-primary btn-block" 
           on:click={() => { 
+            addToCart(product);
             globalStore.toggleItem('cart', true);
           }}>
             add to cart

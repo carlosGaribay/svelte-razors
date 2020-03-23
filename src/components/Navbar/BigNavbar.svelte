@@ -2,6 +2,7 @@
   import CartButton from '../Cart/CartButton.svelte';
   import { link } from 'svelte-routing';
   import links from '../../constants/links';
+  import LoginLink from '../../components/LoginLink.svelte';
 </script>
 
 <nav class="navbar">
@@ -20,6 +21,7 @@
       </a>
 
       <div class="nav-aside">
+        <LoginLink />
         <CartButton />
       </div>
     </div>

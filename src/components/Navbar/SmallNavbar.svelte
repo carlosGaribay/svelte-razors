@@ -11,7 +11,7 @@
     <button class="btn-sidebar-toggle" on:click={() => {
       openSidebar('sidebar', true);
     }}>
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars" />
     </button>
     
     <a href="/" use:link class="nav-logo">
